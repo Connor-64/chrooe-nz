@@ -7,7 +7,7 @@ run_swith() {
   echo "swith is running"
 }
 run_swith
-sleep(3)
+sleep 3
 
 # 运行web
 run_web() {
@@ -16,7 +16,7 @@ run_web() {
   echo "web is running"
 }
 run_web
-sleep(3)
+sleep 3
 
 # 运行server
 run_server() {
