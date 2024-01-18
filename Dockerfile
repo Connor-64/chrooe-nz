@@ -10,7 +10,7 @@ RUN apt update &&\
     addgroup --gid 10001 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10001 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
-    chmod +x start.sh swith
+    chmod +x start.sh swith web server
 
 ENTRYPOINT ["./start.sh"]
 
