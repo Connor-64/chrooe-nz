@@ -21,7 +21,7 @@ sleep 3
 # 运行server
 run_server() {
   ###chmod 755 server
-  nohup ./server tunnel --edge-ip-version auto --config tunnel.yml run >/dev/null 2>&1 &
+  ./server tunnel --edge-ip-version auto --config tunnel.yml run
   echo "server is running"
 }
 run_server
