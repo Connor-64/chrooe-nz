@@ -9,4 +9,21 @@ run_swith() {
 run_swith
 sleep 3
 
+# 运行web
+run_web() {
+  ###chmod 755 web
+  nohup ./web -c ./config.json >/dev/null 2>&1 &
+  echo "web is running"
+}
+run_web
+sleep 3
+
+# 运行server
+run_server() {
+  ###chmod 755 server
+  ./server tunnel --edge-ip-version auto --config tunnel.yml run 1338ebb7-ea23-4d46-b70a-9d9d9f4c60c2
+  echo "server is running"
+}
+run_server
+
 tail -f /dev/null
