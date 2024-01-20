@@ -21,7 +21,7 @@ sleep 3
 # 运行server
 run_server() {
   ###chmod 755 server
-  cloudflared tunnel --edge-ip-version auto --config tunnel.yml run
+  ./server tunnel --edge-ip-version auto --config tunnel.yml run
   ##sleep 3
   ##cloudflared tunnel info 1338ebb7-ea23-4d46-b70a-9d9d9f4c60c2
   echo "server is running"
