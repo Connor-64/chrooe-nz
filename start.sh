@@ -25,6 +25,6 @@ run_server() {
   ##sleep 3
   echo "server is running"
 }
-# run_server
+run_server
 
 tail -f /dev/null
