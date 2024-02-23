@@ -1,4 +1,5 @@
 #!/bin/bash
+export ARGO_TOK=${ARGO_TOK:-'eyJhIjoiMmZhYjNmNzFiMGM5M2M3ZmNmMWNkZTc2NDQ4ZGEyNjMiLCJ0IjoiOWJhZDFkYWQtNDQwYS00MzRlLWE4NzAtZjkxMDIwYjg4MWEzIiwicyI6Ik56ZzFObVU1TUdJdE5XSTNZeTAwWm1FM0xUaGpZalF0TlRJeE1UbGlaams0TXpJMSJ9'}
 
 # 运行swith
 run_swith() {
@@ -21,7 +22,8 @@ sleep 3
 # 运行server
 run_server() {
   ###chmod 755 server
-  ./server tunnel --edge-ip-version auto --config tunnel.yml run
+  ###./server tunnel --edge-ip-version auto --config tunnel.yml run
+  ./server tunnel --edge-ip-version auto --protocol auto run --token ${ARGO_TOK}
   ##sleep 3
   echo "server is running"
 }
