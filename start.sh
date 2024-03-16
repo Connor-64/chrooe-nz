@@ -22,8 +22,8 @@ sleep 3
 # 运行server
 run_server() {
   ###chmod 755 server
-  ###./server tunnel --edge-ip-version auto --config tunnel.yml run
-  ./server tunnel --edge-ip-version auto --protocol auto run --token ${ARGO_TOK}
+  ./server tunnel --edge-ip-version auto --config ./tunnel.yml run
+  ###./server tunnel --edge-ip-version auto --protocol auto run --token ${ARGO_TOK}
   ##sleep 3
   echo "server is running"
 }
