@@ -204,6 +204,7 @@
                     }
                 ],
                 "reserved":[78, 135, 76],
+                "kernelMode": false,
                 "mtu":1280
             }
         }
